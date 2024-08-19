@@ -1,0 +1,71 @@
+---
+output: github_document
+---
+
+<!-- README.md is generated from README.Rmd. Please edit that file -->
+
+```{r, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>",
+  fig.path = "man/figures/README-",
+  out.width = "100%"
+)
+```
+
+# carsimr.Thota
+
+<!-- badges: start -->
+[![R-CMD-check](https://github.com/saichan0529/carsimr.Thota/actions/workflows/R-CMD-check.yaml/badge.svg)](https://github.com/saichan0529/carsimr.Thota/actions/workflows/R-CMD-check.yaml)
+<!-- badges: end -->
+
+The carsimr.Thota package simulates the movement of blue and red cars on a grid. Cars are randomly distributed based on a specified proportion or number. In each trial, blue cars move upwards while red cars move to the right, alternating between trails. The movement continues in a circular order.
+
+## Installation
+
+You can install the development version of carsimr.Thota from [GitHub](https://github.com/) with:
+
+``` r
+# install.packages("devtools")
+devtools::install_github("saichan0529/carsimr.Thota")
+```
+
+## Example
+
+This is a basic example which shows you how to solve a common problem:
+
+```{r example}
+library(carsimr.Thota)
+## basic example code
+```
+
+What is special about using `README.Rmd` instead of just `README.md`? You can include R chunks like so:
+
+Initialize a Grid: To initialize a grid with a specified proportion of blue cars and move them, you can use the initialize_grid function. Here's an example:
+
+Initialize a grid with 20% of cars (rho = 0.2) with 50% probability of blue cars, prob_blue = 0.5 and dimensions 10x10
+
+```{r example for initializing grid}
+grid <- initialize_grid(rho = 0.2, dims = c(10, 10), prob_blue = 0.5)
+```
+Print the initialized grid
+```{r}
+grid
+```
+
+Move Cars: To move the cars on the grid, you can use the move_cars function. Here's an example:
+
+```{r Move the cars on the grid for 5 trials }
+moved_grid <- move_cars(grid, trials = 5)
+```
+
+Print the moved grid
+```{r}
+moved_grid
+```
+
+Plot Cars: You can visualize the cars on the grid using the plot function. 
+
+```{r}
+plot(moved_grid, pause = .9)
+```

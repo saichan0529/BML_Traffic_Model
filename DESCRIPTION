@@ -1,0 +1,21 @@
+Package: carsimr.Thota
+Title: Moving Cars Simulation
+Version: 0.0.0.9000
+Authors@R: 
+    person("Saichand", "Thota", , "first.last@example.com", role = c("aut", "cre"),
+           comment = c(ORCID = "YOUR-ORCID-ID"))
+Description: Simulate the movement of blue and red cars on a grid. Cars are 
+  randomly distributed based on a specified proportion or number. In each trial, 
+  blue cars move upwards while red cars move to the right, alternating between 
+  trails. The movement continues in a circular order.
+License: GPL (>= 3)
+Encoding: UTF-8
+Roxygen: list(markdown = TRUE)
+RoxygenNote: 7.3.0
+Suggests: 
+    testthat (>= 3.0.0)
+Config/testthat/edition: 3
+LinkingTo: 
+    Rcpp
+Imports: 
+    Rcpp
